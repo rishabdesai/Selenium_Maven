@@ -17,7 +17,9 @@ public class UsingWebDriverManager {
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("http://www.google.com");
-		
+		System.out.println("Title of web page is :  "+driver.getTitle());
+		System.out.println("URL of page is :  "+driver.getCurrentUrl());
+		//System.out.println("Page content :   "+driver.getPageSource());
 
 	}
 
