@@ -20,11 +20,19 @@ public class StatusOfWebElement {
 		driver.get("http://www.google.com");
 		
 		
-		WebElement element =driver.findElement(By.xpath("//input[@id='input']"));
+		WebElement element =driver.findElement(By.xpath("//input[@title='Search']"));
 		
 		System.out.println("Display status :  "+element.isDisplayed());
 		
-		System.out.println("Enabled status :  "+element.isDisplayed());
+		System.out.println("Enabled status :  "+element.isEnabled());
+		
+		System.out.println("Selected status :  "+element.isSelected());
+		
+		element.click(); //to select the element
+		
+		
+		
+		
 		
 
 	}
