@@ -20,7 +20,20 @@ public class getTextAndAttributeValue {
 		emailValue.clear();  //clear the context of input box
 		emailValue.sendKeys("test@email.com");  //enter values in input box
 		
-		System.out.println("using getAttribute : "+emailValue.getAttribute("placeholder")); //return value of attribute
+		System.out.println("using getAttribute - placeholder: "+emailValue.getAttribute("placeholder")); //return value of attribute
 		System.out.println("using getText : "+emailValue.getText()); //return inner text 	
+		
+		WebElement btn = driver.findElement(By.xpath("//button[@type='submit']"));
+		System.out.println("using getAttribute - type : "+btn.getAttribute("type"));
+		System.out.println("using getAttribute - class : "+btn.getAttribute("class"));
+		
+		System.out.println("using getText : "+btn.getText());
+		
+		
+		//get inner test using getText()
+		String title = driver.findElement(By.xpath("//div[@class='forget-password text-right']//a")).getText();
+		System.out.println(title);  // output - Forgot Password
+		
+		
 	}
 }
